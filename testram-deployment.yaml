@@ -20,6 +20,4 @@ spec:
           envFrom:
             - configMapRef:
                 name: testram-configmap
-          resources:
-            limits:
-              memory: 256Mi
+         
