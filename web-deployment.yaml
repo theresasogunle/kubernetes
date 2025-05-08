@@ -11,7 +11,7 @@ metadata:
     app: synergychat-web
   name: synergychat-web
   namespace: default
-  resourceVersion: "2483"
+  resourceVersion: "9575"
   uid: d0821424-7dec-4ac2-a706-464d15d8324a
 spec:
   progressDeadlineSeconds: 600
@@ -38,6 +38,9 @@ spec:
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
+        envFrom:
+        - configMapRef:
+            name: synergychat-web-configmap
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
@@ -52,8 +55,8 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2025-05-08T11:32:49Z"
-    lastUpdateTime: "2025-05-08T11:32:49Z"
+  - lastTransitionTime: "2025-05-08T13:48:10Z"
+    lastUpdateTime: "2025-05-08T13:48:10Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
